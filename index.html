@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Samuel-Portfolio</title>
+		<link rel="stylesheet" href="./output.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="./img/logo.png">
+	</head>
+	<body
+		class="relative px-6 bg-lightGray/50 dark:bg-darkBlue transition-color duration-300"
+	>
+		<!-- header -->
+		<header
+			class="container mx-auto flex flex-row items-center justify-between gap-4 sticky top-0 py-4 backdrop-blur-sm z-50"
+		>
+			<h1
+				class="text-xl font-bold text-darkBlue select-none relative after:content-[''] after:w-2 after:h-2 after:bg-gold after:rounded-full after:absolute after:bottom-1.5 after:left-19.5 dark:text-white"
+			>
+				Samuel
+			</h1>
+			<!-- nav -->
+			<nav class="mt-2">
+				<ul
+					class="hidden md:flex flex-row gap-6 font-bold items-center text-gray dark:text-white/90"
+				>
+					<li class="dark:after:bg-white">
+						<a href="#home">Home</a>
+					</li>
+					<li>
+						<a href="#about">About</a>
+					</li>
+					<li>
+						<a href="#services">Services</a>
+					</li>
+					<li>
+						<a href="#projects">Projects</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- hamburger icon and mode toogling icons -->
+
+			<div class="flex flex-row gap-3 items-center">
+				<!-- light & dark mode -->
+				<button
+					class="w-10 h-10 p-2 hover:bg-lightGray/70 dark:hover:bg-white/20 rounded-lg"
+					onclick="toggleMode()"
+				>
+					<img
+						src="./img/theme-toggle-dark-icon.svg"
+						class="dark:hidden w-full"
+						alt="light mode"
+					/>
+					<img
+						src="./img/theme-toggle-light-icon.svg"
+						class="hidden dark:block w-full"
+						alt="dark mode"
+					/>
+				</button>
+				<!-- hamburger icon -->
+				<button
+					class="md:hidden hover:scale-120 transition-all duration-100"
+					onclick="openHamMenu()"
+				>
+					<i
+						class="fa-solid fa-bars text-2xl text-darkBlue dark:text-white/70 mt-1"
+					></i>
+				</button>
+			</div>
+
+			<!-- hamburger menu -->
+			<div
+				class="hamburger md:hidden transition-discrete duration-500 absolute bg-white dark:bg-darkBlue dark:shadow-[0px_2px_5px_white] p-6 rounded-lg shadow-md -top-96 w-full"
+			>
+				<button
+					class="w-7 rounded-full absolute right-4 top-4 cursor-pointer hover:scale-120 transition-all duration-200 dark:bg-white p-2" 
+				>
+					<img
+						src="./img/cross.svg"
+						alt="close icon"
+						onclick="closeHamMenu()"
+					/>
+				</button>
+				<ul
+					class="mt-12 text-center space-y-2 font-bold text-darkBlue dark:text-white"
+				>
+					<li>
+						<a href="#home">Home</a>
+					</li>
+					<li>
+						<a href="#about">About</a>
+					</li>
+					<li>
+						<a href="#services">Services</a>
+					</li>
+					<li>
+						<a href="#projects">Projects</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- main -->
+		<main class="container mx-auto">
+			<!-- hero section -->
+			<section
+				data-aos="slide-down"
+				data-aos-duration="1000"
+				id="home"
+				class="container mx-auto flex flex-col items-center h-screen justify-center gap-12 lg:flex-row lg:gap-24 -mt-16"
+			>
+				<!-- profle image -->
+				<div
+					class="rounded-full w-64 h-auto pt-2 overflow-hidden bg-lightGray lg:w-1/3  shadow-[0px_0px_7px_darkBlue] hover:shadow-gold transition-all duration-300 dark:shadow-white"
+				>
+					<img src="./img/pp1.png" alt="profile picture" />
+				</div>
+
+				<!-- hero text -->
+				<div class="text-center flex flex-col gap-3 items-center lg:gap-4">
+					<h3 class="text-gray font-bold text-lg dark:text-white">
+						Hello👋, I'm
+					</h3>
+					<h1
+						class="font-bold text-3xl text-darkBlue dark:text-white lg:text-4xl"
+					>
+						Shonde Samuel
+					</h1>
+					<h2 class="text-gray font-semibold lg:text-2xl dark:text-purple">
+						Frontend & No-Code Web Developer
+					</h2>
+					<div class="flex flex-row gap-4 font-semibold items-center mt-2">
+						<a
+							href="#contact"
+							class="py-3 px-4 text-white hover:-translate-y-1 hover:shadow-[2px_2px_5px_darkBlue] dark:hover:shadow-white rounded-4xl bg-gradient-to-r from-purple to-gold group"
+							>Contact Me <span><i class="fa-solid fa-paper-plane ml-1 group-hover:translate-x-1 group-hover:-translate-y-1"></i></a
+						>
+						<a
+							href=""
+							class="py-3 px-4 bg-darkBlue text-white rounded-4xl hover:-translate-y-1 hover:shadow-[2px_2px_5px_blue] dark:border-2 dark:border-white/70"
+							>My Resume <span><i class="fa-solid fa-download ml-1"></i></span
+						></a>
+					</div>
+					<div
+						class="flex flex-row gap-6 mt-2 text-gray text-2xl dark:text-white"
+					>
+						<a
+							href="https://www.linkedin.com/in/samuel-shonde-4a263a2b0"
+							target="_blank"
+							><i
+								class="fa-brands fa-linkedin hover:-translate-y-1 hover:text-purple"
+							></i
+						></a>
+						<a href="https://github.com/SAMCOM-07" target="_blank"
+							><i
+								class="fa-brands fa-github hover:-translate-y-1 hover:text-purple"
+							></i
+						></a>
+						<a href="https://x.com/SammyShowed" target="_blank"
+							><i
+								class="fa-brands fa-twitter hover:-translate-y-1 hover:text-purple"
+							></i
+						></a>
+					</div>
+				</div>
+			</section>
+
+			<!-- about section -->
+			<section
+				data-aos="fade-up"
+				data-aos-duration="1500"
+				id="about"
+				class="container lg:h-screen mx-auto text-center max-w-6xl scroll-mt-46"
+			>
+				<p class="text-lightGray font-semibold text-sm dark:text-white/70 mb-2">
+					Get to know more
+				</p>
+				<h1
+					class="text-3xl font-bold text-black dark:text-white border-b-2 border-purple inline"
+				>
+					About Me
+				</h1>
+
+				<div
+					class="flex flex-col-reverse gap-6 lg:flex-row mt-12 items-center lg:flex-row lg:justify-evenly"
+				>
+					<div
+						class="text-sm max-w-md lg:max-w-lg xl:max-w-xl flex flex-col gap-3 text-gray dark:text-white/80 font-bold text-start lg:text-[16px] px-6 md:px-0"
+					>
+						<p>
+							A <strong>passionate</strong>
+							<span class="text-purple">Front-End and No-Code Developer</span>
+							with a growing skill set in building modern, user-friendly
+							websites using
+							<span class="text-purple"
+								>HTML, CSS, JavaScript, Tailwind, and React.</span
+							>
+							I also create dynamic and professional websites/E-commerce store
+							using
+							<span class="text-purple"
+								>WordPress, Shopify, Wix, and Squarespace.</span
+							>
+						</p>
+						<p>
+							I'm currently a
+							<span class="text-purple"
+								>Computer Engineering student at Ekiti State University</span
+							>, where I combine my academic learning with real-world projects
+							to build impactful web solutions. Beyond tech, I'm a God-fearing
+							individual who values integrity, growth, and service.
+						</p>
+						<p>
+							I'm always eager to
+							<span class="text-purple"
+								>learn, improve, and collaborate on meaningful projects</span
+							>. Whether it's coding from scratch or using powerful no-code
+							tools, I love bringing ideas to life on the web. Let's build
+							something amazing together.
+						</p>
+					</div>
+
+					<div
+						class="rounded-xl overflow-hidden shadow-[0px_0px_5px_purple] dark:shadow-white h-[350px] w-[250px] relative"
+					>
+						<div class="w-full h-full overflow-hidden rounded-xl p-2">
+							<img
+								src="./img/pp4.png"
+								alt="picture"
+								class="rounded-xl bg-lightGray dark:border-2 dark:border-white/50 pt-3"
+							/>
+						</div>
+						<div
+							class="bg-darkBlue dark:bg-gray w-full h-30 absolute bottom-0 z-50 rounded-xl flex flex-row gap-4 items-center justify-evenly"
+						>
+							<a
+								href="https://www.tiktok.com/@samuel_loveth07?lang=en"
+								target="_blank"
+								><i
+									class="fa-brands fa-tiktok text-white text-2xl hover:text-purple"
+								></i
+							></a>
+							<a href="https://github.com/SAMCOM-07" target="_blank"
+								><i
+									class="fa-brands fa-github text-white text-2xl hover:text-purple"
+								></i
+							></a>
+							<a href="https://wa.me/+2349061873560" target="_blank"
+								><i
+									class="fa-brands fa-square-whatsapp text-white text-3xl hover:text-purple"
+								></i
+							></a>
+							<a href="https://fiverr.com/samuelexcell" target="_blank"
+								><img src="./img/fiverr.png" alt="fiverr logo" class="w-8"
+							/></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Technologies used images -->
+				<section class="container mx-auto">
+					<h1 class="font-bold text-2xl mt-24 mb-12 dark:text-white">
+						Technologies I Use
+					</h1>
+					<!-- images -->
+					<div class="overflow-hidden">
+						<div
+							class="flex flex-row items-center gap-12 animate-[scroll-x_5s_linear_infinite] lg:animate-[scroll-x_10s_linear_infinite] w-[200%]"
+						>
+							<!-- Duplicate image set for seamless scroll -->
+							<img src="./img/html.png" alt="" class="w-20 h-20 rounded-xl" />
+							<img src="./img/css.png" alt="" class="w-20 h-20 rounded-xl" />
+							<img src="./img/js.jpeg" alt="" class="w-20 h-20 rounded-xl" />
+							<img
+								src="./img/git.svg"
+								alt=""
+								class="w-20 h-20 rounded-xl dark:bg-white"
+							/>
+							<img src="./img/react.svg" alt="" class="w-20 h-20 rounded-xl" />
+							<img
+								src="./img/tailwind.svg"
+								alt=""
+								class="w-20 h-20 rounded-xl"
+							/>
+							<img
+								src="./img/typescript.png"
+								alt=""
+								class="w-20 h-20 rounded-xl"
+							/>
+							<img
+								src="./img/wordpress.png"
+								alt=""
+								class="w-20 h-20 rounded-xl"
+							/>
+							<img
+								src="./img/shopify.png"
+								alt=""
+								class="w-20 h-20 rounded-xl"
+							/>
+							<img
+								src="./img/squarespace.png"
+								alt=""
+								class="w-20 h-20 rounded-xl dark:bg-white"
+							/>
+							<img
+								src="./img/wix.png"
+								alt=""
+								class="w-20 h-20 rounded-xl dark:bg-white"
+							/>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<!-- services section -->
+			<section
+				id="services"
+				class="container mt-24 lg:mt-0 mx-auto md:h-screen scroll-mt-22 md:scroll-mt-32 max-w-4xl"
+			>
+				<h1 class="text-center font-bold text-2xl dark:text-white">Services I Offer</h1>
+				<!-- boxes -->
+				<div
+					data-aos="slide-up"
+					data-aos-duration="1000"
+					class="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2"
+				>
+					<!-- box 1 -->
+					<div
+						class="flex flex-col gap-2 p-6 rounded-lg shadow-[0_0_5px_purple] hover:bg-lightGray/50 hover:-translate-1.5 hover:shadow-[2px_2px_5px_purple] transition-all duration-300 dark:shadow-white dark:bg-gray/50"
+					>
+						<img src="./img/react.svg" alt="" class="w-16" />
+						<h1 class="font-bold text-lg text-darkBlue dark:text-white/90">
+							Frontend Web Development
+						</h1>
+						<p class="text-gray text-sm dark:text-white/70">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+							praesentium vel atque quod porro, modi quo. Cupiditate commodi
+							cumque adipisci quasi similique odit alias illo!
+						</p>
+					</div>
+					<!-- box 2-->
+					<div
+						class="flex flex-col gap-2 p-6 rounded-lg shadow-[0_0_5px_purple] hover:bg-lightGray/50 hover:-translate-1.5 hover:shadow-[2px_2px_5px_purple] transition-all duration-300 dark:shadow-white dark:bg-gray/50"
+					>
+						<img src="./img/tailwind.svg" alt="" class="w-16" />
+						<h1 class="font-bold text-lg text-darkBlue dark:text-white/90">Website Design</h1>
+						<p class="text-gray text-sm dark:text-white/70">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+							praesentium vel atque quod porro, modi quo. Cupiditate commodi
+							cumque adipisci quasi similique odit alias illo!
+						</p>
+					</div>
+					<!-- box 3 -->
+					<div
+						class="flex flex-col gap-2 p-6 rounded-lg shadow-[0_0_5px_purple] hover:bg-lightGray/50 hover:-translate-1.5 hover:shadow-[2px_2px_5px_purple] transition-all duration-300 dark:shadow-white dark:bg-gray/50"
+					>
+						<img src="./img/wordpress.png" alt="" class="w-16 rounded-xl" />
+						<h1 class="font-bold text-lg text-darkBlue dark:text-white/90">
+							No-Code Website Development
+						</h1>
+						<p class="text-gray text-sm dark:text-white/70">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+							praesentium vel atque quod porro, modi quo. Cupiditate commodi
+							cumque adipisci quasi similique odit alias illo!
+						</p>
+					</div>
+					<!-- box 4 -->
+					<div
+						class="flex flex-col gap-2 p-6 rounded-lg shadow-[0_0_5px_purple] hover:bg-lightGray/50 hover:-translate-1.5 hover:shadow-[2px_2px_5px_purple] transition-all duration-300 dark:shadow-white dark:bg-gray/50"
+					>
+						<img src="./img/shopify.png" alt="" class="w-36 rounded-xl" />
+						<h1 class="font-bold text-lg text-darkBlue dark:text-white/90">
+							Ecommerce Online Stores
+						</h1>
+						<p class="text-gray text-sm dark:text-white/70">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+							praesentium vel atque quod porro, modi quo. Cupiditate commodi
+							cumque adipisci quasi similique odit alias illo!
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- projects section -->
+		  <section id="projects" class="container mt-24 md:mt-0 mx-auto text-center flex flex-col items-center gap-5 xl:h-screen scroll-mt-26">
+        <h1 class="font-bold text-2xl dark:text-white">Projects</h1>
+        <p class="text-gray dark:text-white/70 w-[90%] text-start md:text-center my-8">Over time, I've worked on various projects that reflect my skills in website development. From simple landing pages to full websites built with tools like html, css, javascript, and Tailwind CSS. Each project taught me something new and helped me grow as a frontend developer. Here are a few highlights:</p>
+
+        <!-- project cards -->
+        <div data-aos="slide-up"
+					data-aos-duration="1000"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-4">
+          <!-- card 1 -->
+          <div class="p-4 flex flex-col gap-4 rounded-xl border-2 border-lightGray dark:border-white/80">
+            <div class="rounded-xl overflow-hidden h-[70%]">
+              <img src="./img/anon.png" alt="">
+            </div>
+            <h3 class=" dark:text-white">Project 1</h3>
+            <div class="flex flex-row justify-between gap-4">
+              <a href="https://github.com/SAMCOM-07/anon" target="_blank" class="rounded-4xl text-gray border-2 hover:text-purple hover:border-purple dark:text-white dark:border-white border-gray py-2 px-4">Github <i class="fa-brands fa-github ml-1"></i></a>
+              <a href="https://anon-black.vercel.app/" target="_blank" class="rounded-4xl text-gray border-2 hover:text-purple hover:border-purple dark:text-white dark:border-white border-gray  py-2 px-4">Live Demo <i class="fa-solid fa-paper-plane ml-1"></i></a>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="p-4 flex flex-col gap-4 rounded-xl border-2 border-lightGray dark:border-white/80">
+            <div class="rounded-xl overflow-hidden h-[70%]">
+              <img src="./img/filter.png" alt="">
+            </div>
+            <h3 class=" dark:text-white">Project 2</h3>
+            <div class="flex flex-row justify-between gap-4">
+              <a href="https://github.com/SAMCOM-07/product-filtering" target="blank" class="rounded-4xl text-gray border-2 hover:text-purple hover:border-purple dark:text-white dark:border-white border-gray  py-2 px-4">Github <i class="fa-brands fa-github ml-1"></i></a>
+              <a href="https://product-filtering-red.vercel.app/" target="_blank" class="rounded-4xl text-gray border-2 hover:text-purple hover:border-purple dark:text-white dark:border-white border-gray  py-2 px-4">Live Demo <i class="fa-solid fa-paper-plane ml-1"></i></a>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="p-4 flex flex-col gap-4 rounded-xl border-2 border-lightGray dark:border-white/80">
+            <div class="rounded-xl overflow-hidden h-[70%]">
+              <img src="./img/fylo.png" alt="">
+            </div>
+            <h3 class=" dark:text-white">Project 3</h3>
+            <div class="flex flex-row justify-between gap-4">
+              <a href="https://github.com/SAMCOM-07/fylo" target="_blank" class="rounded-4xl text-gray border-2 hover:text-purple hover:border-purple dark:text-white dark:border-white border-gray  py-2 px-4">Github <i class="fa-brands fa-github ml-1"></i></a>
+              <a href="https://fylo-nu-seven.vercel.app/" target="_blank" class="rounded-4xl text-gray border-2 hover:text-purple hover:border-purple dark:text-white dark:border-white border-gray  py-2 px-4">Live Demo <i class="fa-solid fa-paper-plane ml-1"></i></a>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="p-4 flex flex-col gap-4 rounded-xl border-2 border-lightGray dark:border-white/80">
+            <div class="rounded-xl overflow-hidden h-[70%]">
+              <img src="./img/shortly.png" alt="">
+            </div>
+            <h3 class=" dark:text-white">Project 4</h3>
+            <div class="flex flex-row justify-between gap-4">
+              <a href="https://github.com/SAMCOM-07/Shortly" target="_blank" class="rounded-4xl text-gray border-2 hover:text-purple hover:border-purple dark:text-white dark:border-white border-gray  py-2 px-4">Github <i class="fa-brands fa-github ml-1"></i></a>
+              <a href="https://shortly-mu-ten.vercel.app/" target="_blank" class="rounded-4xl text-gray border-2 hover:text-purple hover:border-purple dark:text-white dark:border-white border-gray  py-2 px-4">Live Demo <i class="fa-solid fa-paper-plane ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact section -->
+       <section id="contact" class="container mx-auto text-center h-screen mt-24 xl:mt-0 scroll-mt-22 max-w-4xl flex flex-col gap-3">
+        <h3 class="text-gray dark:text-white/70">Connect with me</h3>
+        <h1 class="text-2xl font-semibold dark:text-white">Get In Touch</h1>
+        <p class="text-gray text-sm dark:text-purple">I'd love to hear from you. If you have any question or feedback, please use the form below or reach out to me in any of my socials. Thank you.</p>
+
+        <!-- inputs -->
+         <div class="flex flex-col md:flex-row gap-4 mt-4">
+          <input type="text" placeholder="Enter full name" required
+          class="p-3 outline-none border-1 border-lightGray rounded-lg text-gray flex-1 dark:text-white/70 dark:border-white/70">
+          <input type="email" placeholder="Enter email" required
+          class="p-3 outline-none border-1 border-lightGray rounded-lg text-gray flex-1 dark:text-white/70 dark:border-white/70">
+         </div>
+
+         <!-- text Area -->
+          <textarea name="message" id="" placeholder="Enter your message here...."
+          class="h-[300px] max-h-[300px] md:h-[450px] md:max-h-[450px] mt-4 border-1 border-lightGray rounded-lg p-3 outline-none text-gray dark:text-white/70 dark:border-white/70"></textarea>
+          <!-- submit button -->
+          <a href="" class="text-white bg-black hover:opacity-75 active:scale-75 dark:bg-transparent dark:border dark:border-white rounded-3xl py-3 px-6 mt-2 w-fit self-center dark:hover:text-purple dark:hover:border-purple">Submit now <i class="fa-solid fa-paper-plane ml-1"></i></a>
+       </section>
+		</main>
+
+    	
+    <h1
+    class="text-2xl font-bold text-darkBlue select-none relative after:content-[''] after:w-2 after:h-2 after:bg-gold after:rounded-full after:absolute after:bottom-1.5 after:left dark:text-white text-center"
+			>
+				Samuel
+			</h1>
+      <p class="font-semibold text-center text-sm dark:text-white">shondesamuel07@gmail.com</p>
+
+      <hr class="text-gray dark:text-white h-2 font-bold w-full mt-12">
+      <footer class="my-6 flex flex-col-reverse gap-4 md:flex-row justify-evenly items-center">
+        <p class="text-sm text-gray dark:text-white/70">&copy; 2025 Shonde Samuel. All rights reserved.</p>
+        <div
+						class="flex flex-row gap-6 mt-2 text-gray text-2xl dark:text-white"
+					>
+						<a
+							href="https://www.linkedin.com/in/samuel-shonde-4a263a2b0"
+							target="_blank"
+							><i
+								class="fa-brands fa-linkedin hover:-translate-y-1 hover:text-purple"
+							></i></a>
+						<a href="https://github.com/SAMCOM-07" target="_blank"
+							><i
+								class="fa-brands fa-github hover:-translate-y-1 hover:text-purple"
+							></i
+						></a>
+						<a href="https://x.com/SammyShowed" target="_blank"
+							><i
+								class="fa-brands fa-twitter hover:-translate-y-1 hover:text-purple"
+							></i
+						></a>
+            <a href="https://wa.me/+2349061873560" target="_blank"
+              ><i
+                class="fa-brands fa-square-whatsapp hover:-translate-y-1 hover:text-purple"
+              ></i
+            ></a>
+				</div>
+      </footer>
+
+      <!-- back to top -->
+       <a href="#home" class="text-white text-xl hover:-translate-y-2 bg-darkBlue dark:text-darkBlue dark:bg-white p-4 rounded-full absolute right-8 bottom-1"><i class="fa-solid fa-arrow-up"></i></a>
+
+		<script
+			src="https://kit.fontawesome.com/cc6d18c10c.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script src="./script.js"></script>
+	</body>
+</html>

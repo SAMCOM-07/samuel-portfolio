@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@theme{
+  --breakpoint-*: initial;
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+
+  --color-darkBlue: hsla(240, 100%, 10%, 1);
+  --color-blue: hsla(240, 100%, 30%, 1);
+  --color-purple: hsla(270, 100%, 70%, 1);
+  --color-gold: hsla(40, 70%, 60%, 1);
+  --color-black: hsla(0, 0%, 0%, 0.8);
+  --color-gray: hsla(0, 0%, 0%, 0.5);
+  --color-lightGray: hsla(0, 0%, 0%, 0.1);
+}
+
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+button, a, i{
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+header li{
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 7px;
+  position: relative;
+}
+
+header li:hover{
+  color: var(--color-purple);
+}
+
+header>nav>ul>li:hover::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-blue);
+  animation: slide 0.3s ease-in-out;
+}
+
+@keyframes slide{
+  from{
+    width: 0%;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+@keyframes scroll-x {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
