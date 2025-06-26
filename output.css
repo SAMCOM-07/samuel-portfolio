@@ -14,7 +14,6 @@
     --container-lg: 32rem;
     --container-xl: 36rem;
     --container-4xl: 56rem;
-    --container-5xl: 64rem;
     --container-6xl: 72rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
@@ -228,8 +227,8 @@
   }
   .container {
     width: 100%;
-    @media (width >= 375px) {
-      max-width: 375px;
+    @media (width >= 480px) {
+      max-width: 480px;
     }
     @media (width >= 768px) {
       max-width: 768px;
@@ -310,6 +309,9 @@
   .h-\[350px\] {
     height: 350px;
   }
+  .h-\[450px\] {
+    height: 450px;
+  }
   .h-auto {
     height: auto;
   }
@@ -321,6 +323,9 @@
   }
   .max-h-\[300px\] {
     max-height: 300px;
+  }
+  .max-h-\[450px\] {
+    max-height: 450px;
   }
   .w-7 {
     width: calc(var(--spacing) * 7);
