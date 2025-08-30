@@ -15,7 +15,7 @@
   --color-blue: hsla(240, 100%, 30%, 1);
   --color-purple: hsla(270, 100%, 70%, 1);
   --color-gold: hsla(40, 70%, 60%, 1);
-  --color-black: hsla(0, 0%, 0%, 0.8);
+  /* --color-black: hsla(0, 0%, 0%, 0.8); */
   --color-gray: hsla(0, 0%, 0%, 0.5);
   --color-lightGray: hsla(0, 0%, 0%, 0.1);
 }
