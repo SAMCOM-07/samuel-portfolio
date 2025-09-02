@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-950: oklch(13% 0.028 261.692);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -42,6 +43,7 @@
     --color-blue: hsla(240, 100%, 30%, 1);
     --color-purple: hsla(270, 100%, 70%, 1);
     --color-gold: hsla(40, 70%, 60%, 1);
+    --color-blacky: hsla(0, 0%, 7%, 1);
     --color-gray: hsla(0, 0%, 0%, 0.5);
     --color-lightGray: hsla(0, 0%, 0%, 0.1);
   }
@@ -303,6 +305,9 @@
   .h-30 {
     height: calc(var(--spacing) * 30);
   }
+  .h-64 {
+    height: calc(var(--spacing) * 64);
+  }
   .h-\[70\%\] {
     height: 70%;
   }
@@ -311,9 +316,6 @@
   }
   .h-\[450px\] {
     height: 450px;
-  }
-  .h-auto {
-    height: auto;
   }
   .h-full {
     height: 100%;
@@ -500,8 +502,8 @@
   .border-purple {
     border-color: var(--color-purple);
   }
-  .bg-black {
-    background-color: var(--color-black);
+  .bg-blacky {
+    background-color: var(--color-blacky);
   }
   .bg-darkBlue {
     background-color: var(--color-darkBlue);
@@ -597,8 +599,8 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .text-black {
-    color: var(--color-black);
+  .text-blacky {
+    color: var(--color-blacky);
   }
   .text-darkBlue {
     color: var(--color-darkBlue);
@@ -882,6 +884,11 @@
       display: none;
     }
   }
+  .md\:h-auto {
+    @media (width >= 768px) {
+      height: auto;
+    }
+  }
   .md\:h-screen {
     @media (width >= 768px) {
       height: 100vh;
@@ -1055,33 +1062,9 @@
       background-color: var(--color-black);
     }
   }
-  .dark\:bg-black\/20 {
+  .dark\:bg-blacky {
     &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, #000 20%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-black) 20%, transparent);
-      }
-    }
-  }
-  .dark\:bg-black\/90 {
-    &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, #000 90%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-black) 90%, transparent);
-      }
-    }
-  }
-  .dark\:bg-black\/95 {
-    &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, #000 95%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-black) 95%, transparent);
-      }
-    }
-  }
-  .dark\:bg-darkBlue {
-    &:where(.dark, .dark *) {
-      background-color: var(--color-darkBlue);
+      background-color: var(--color-blacky);
     }
   }
   .dark\:bg-gray {
@@ -1089,11 +1072,19 @@
       background-color: var(--color-gray);
     }
   }
-  .dark\:bg-gray\/50 {
+  .dark\:bg-gray-950\/80 {
     &:where(.dark, .dark *) {
-      background-color: color-mix(in srgb, hsla(0, 0%, 0%, 0.5) 50%, transparent);
+      background-color: color-mix(in srgb, oklch(13% 0.028 261.692) 80%, transparent);
       @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-gray) 50%, transparent);
+        background-color: color-mix(in oklab, var(--color-gray-950) 80%, transparent);
+      }
+    }
+  }
+  .dark\:bg-gray\/75 {
+    &:where(.dark, .dark *) {
+      background-color: color-mix(in srgb, hsla(0, 0%, 0%, 0.5) 75%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-gray) 75%, transparent);
       }
     }
   }
@@ -1105,6 +1096,11 @@
   .dark\:bg-white {
     &:where(.dark, .dark *) {
       background-color: var(--color-white);
+    }
+  }
+  .dark\:p-4 {
+    &:where(.dark, .dark *) {
+      padding: calc(var(--spacing) * 4);
     }
   }
   .dark\:text-darkBlue {
@@ -1214,6 +1210,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
   font-family: "Poppins", sans-serif;
+}
+.spin-slow {
+  animation-duration: 3s !important;
 }
 button, a, i {
   cursor: pointer;
